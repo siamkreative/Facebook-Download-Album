@@ -45,7 +45,7 @@ body {
 	position: relative;
 	padding-right: 65px;
 }
-#download_all span {
+#download_all .icon {
 	position: absolute;
 	right: 0;
 	top: 0;
