@@ -16,6 +16,26 @@ body {
 #about .intro {
 	margin: 2em auto;
 }
+#login {
+	height: 60px;
+	line-height: 60px;
+	margin-bottom: 20px;
+	border: 1px solid #faebcc;
+	color: #8a6d3b;
+	background-color: #fcf8e3;
+	box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+	border-radius: 3px;
+}
+#login .fb-login-button {
+	display: none;
+	line-height: 25px;
+}
+.form-disabled {
+	opacity: 0.5;
+}
+.form-disabled:hover * {
+	cursor: not-allowed;	
+}
 #download_all {
 	font-size: 125%;
 	background: rgb(28, 184, 65);
