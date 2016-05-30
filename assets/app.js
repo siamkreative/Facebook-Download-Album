@@ -85,6 +85,9 @@ function downloadAlbum() {
 		// Graph API - Get album photos
 		FB.api(id + '/?fields=photos{images}', function (response) {
 
+			// Count the photos
+			var count = Object.keys(response.photos.data).length;
+
 			// Show photos as thumbnails
 			var dynamicItems = '';
 			var sizeSmallest;
@@ -99,7 +102,7 @@ function downloadAlbum() {
 
 			// Download photos using vanilla JavaScript for the onClick event
 			$('#download_single').show();
-			$('#download_all').show().click(function (event) {
+			$('#download_all').show().append('<span class="count">(' + count + ')</span>').click(function (event) {
 				event.preventDefault();
 				$('.download').each(function (index, el) {
 					document.getElementsByClassName("download")[index].click();
