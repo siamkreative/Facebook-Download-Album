@@ -101,8 +101,9 @@ function downloadAlbum() {
 			list.append(dynamicItems);
 
 			// Download photos using vanilla JavaScript for the onClick event
+			$('#download_all .count').html('(' + count + ')');
 			$('#download_single').show();
-			$('#download_all').show().append('<span class="count">(' + count + ')</span>').click(function (event) {
+			$('#download_all').show().click(function (event) {
 				event.preventDefault();
 				$('.download').each(function (index, el) {
 					document.getElementsByClassName("download")[index].click();
