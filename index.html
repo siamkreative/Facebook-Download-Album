@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>A Facebook Graph API Experiment</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="//cdn.jsdelivr.net/pure/0.6.0/pure-min.css" rel="stylesheet">
+		<link rel="stylesheet" href="assets/app.css">
+	</head>
+	<body>
+		<div id="about">
+			<h2>Downloading Photos from a Facebook Album</h2>
+			<div class="intro">
+				<p>I wanted to download <a href="https://www.facebook.com/media/set/?set=a.1001938423194815.1073741836.429911787064151&type=3">this album</a> from Sarawut Intarob to use his pictures as wallpapers.</p>
+				<p>I didn't want to install a browser extension so I decided to digg the Graph API, and figure out if it was possible to built a tool with front-end technologies only.</p>
+			</div>
+			<form id="form" class="pure-form">
+				<input class="pure-input-2-3" id="album_url" type="url" placeholder="Album URL" required>
+				<button type="submit" class="pure-button pure-button-primary">Get Photos</button>
+			</form>
+		</div>
+		
+		<div id="results" style="display: none;">
+			<button id="download_all" class="pure-button pure-button-primary" style="display: none;">Download all <span></span></button>
+			<p id="download_single" style="display: none;">Clicking on an image will start its download.</p>
+			<div id="list">
+				<img src="assets/ball-triangle.svg" width="50" alt="Loading...">
+			</div>
+		</div>
+		
+		<small id="copy">Built in Bangkok by <a href="http://siamkreative.com/">@siamkreative</a>.<br> Download icon made by <a href="http://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></small>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="assets/vendor/jquery-2.2.4.min"><\/script>')</script>
+		<script src="assets/app.js"></script>
+	</body>
+</html>

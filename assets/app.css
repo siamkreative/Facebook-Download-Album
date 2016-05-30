@@ -1,0 +1,64 @@
+body {
+	background-color: #f1f1f1;
+	text-align: center;
+}
+#about {
+	max-width: 40em;
+	margin: 45px auto;
+	background: #fff;
+	padding: 45px;
+	box-shadow: 0 0 45px rgba(0, 0, 0, .1);
+	border-radius: 3px;
+}
+#about h2 {
+	margin-top: 0;
+}
+#about .intro {
+	margin: 2em auto;
+}
+#download_all {
+	font-size: 125%;
+	background: rgb(28, 184, 65);
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	text-transform: uppercase;
+	/* required for icon */
+	position: relative;
+	padding-right: 65px;
+}
+#download_all span {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: block;
+	height: 100%;
+	width: 45px;
+    background: #222 url('download.svg') no-repeat;
+    background-size: 50%;
+    background-position: 50% 50%;
+}
+#list {
+	margin: 35px auto;
+}
+#list a > img {
+	margin: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+	border-radius: 3px;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+#list a:hover > img {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+#copy {
+	display: block;
+	margin-bottom: 45px;
+	color: #666;
+}
+#copy a {
+	color: #666;
+}
