@@ -66,7 +66,6 @@ function downloadAlbum() {
 
 	// Graph API - Display the current user's name
 	FB.api('/me', function (response) {
-		console.log(response);
 		$('#status').html('Thanks for using this tool, ' + response.name);
 	});
 
@@ -85,7 +84,6 @@ function downloadAlbum() {
 
 		// Graph API - Get album photos
 		FB.api(id + '/?fields=photos{images}', function (response) {
-			console.log(response);
 
 			// Show photos as thumbnails
 			var dynamicItems = '';
