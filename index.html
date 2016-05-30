@@ -10,13 +10,20 @@
 		<link rel="stylesheet" href="assets/app.css">
 	</head>
 	<body>
+		
+		<div id="login">
+			<span id="status">Loading...</span>
+			<span class="fb-login-button" data-size="large" data-show-faces="false" scope="public_profile,email" onlogin="checkLoginState();"></span>
+		</div>
+		
 		<div id="about">
 			<h2>Downloading Photos from a Facebook Album</h2>
 			<div class="intro">
 				<p>I wanted to download <a href="https://www.facebook.com/media/set/?set=a.1001938423194815.1073741836.429911787064151&type=3">this album</a> from Sarawut Intarob to use his pictures as wallpapers.</p>
 				<p>I didn't want to install a browser extension so I decided to digg the Graph API, and figure out if it was possible to built a tool with front-end technologies only.</p>
 			</div>
-			<form id="form" class="pure-form">
+			
+			<form id="form" class="pure-form form-disabled">
 				<input class="pure-input-2-3" id="album_url" type="url" placeholder="Album URL" required>
 				<button type="submit" class="pure-button pure-button-primary">Get Photos</button>
 			</form>
@@ -30,7 +37,7 @@
 			</div>
 		</div>
 		
-		<small id="copy">Built in Bangkok by <a href="http://siamkreative.com/">@siamkreative</a>.<br> Download icon made by <a href="http://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></small>
+		<small id="copy">Built in Bangkok by <a href="http://siamkreative.com/">@siamkreative</a><br> Download icon made by <a href="http://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a><br> <a href="https://github.com/SiamKreative/Facebook-Download-Album">Code on Github</a></small>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="assets/vendor/jquery-2.2.4.min"><\/script>')</script>

@@ -16,13 +16,32 @@ body {
 #about .intro {
 	margin: 2em auto;
 }
+#login {
+	height: 60px;
+	line-height: 60px;
+	margin-bottom: 20px;
+	border: 1px solid #faebcc;
+	color: #8a6d3b;
+	background-color: #fcf8e3;
+	box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+	border-radius: 3px;
+}
+#login .fb-login-button {
+	display: none;
+	line-height: 25px;
+}
+.form-disabled {
+	opacity: 0.5;
+}
+.form-disabled:hover * {
+	cursor: not-allowed;	
+}
 #download_all {
 	font-size: 125%;
 	background: rgb(28, 184, 65);
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 	overflow: hidden;
 	text-transform: uppercase;
-	/* required for icon */
 	position: relative;
 	padding-right: 65px;
 }
@@ -34,9 +53,9 @@ body {
 	display: block;
 	height: 100%;
 	width: 45px;
-    background: #222 url('download.svg') no-repeat;
-    background-size: 50%;
-    background-position: 50% 50%;
+	background: #222 url('download.svg') no-repeat;
+	background-size: 50%;
+	background-position: 50% 50%;
 }
 #list {
 	margin: 35px auto;
@@ -59,6 +78,11 @@ body {
 	margin-bottom: 45px;
 	color: #666;
 }
-#copy a {
+#copy {
+	line-height: 1.6;
 	color: #666;
+}
+#copy a {
+	color: #0078e7;
+	text-decoration: none;
 }
