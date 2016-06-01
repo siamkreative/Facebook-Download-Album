@@ -79,8 +79,13 @@ function downloadAlbum() {
 
 		// Get the Album ID from the requested URL
 		var id;
-		id = $('#album_url').val().split('set=a.')[1];
-		id = id.split('.')[0];
+		var str = $('#album_url').val();
+		if (str.indexOf("album_id=") >= 0) {
+			id = str.split('album_id=')[1];
+		} else if (str.indexOf('set=a.')) {
+			id = str.split('set=a.')[1];
+			id = id.split('.')[0];
+		}
 
 		// Graph API - Get album photos
 		FB.api(id + '/?fields=photos{images}', function (response) {
