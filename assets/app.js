@@ -70,7 +70,7 @@ function downloadAlbum() {
 	});
 
 	// Enable the form
-	$('#form').removeClass('form-disabled');
+	$('#form').removeClass('form-disabled').off('click');
 	$('#form').on('submit', function (event) {
 		event.preventDefault();
 
