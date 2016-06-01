@@ -88,7 +88,7 @@ function downloadAlbum() {
 		}
 
 		// Graph API - Get album photos
-		FB.api(id + '/?fields=photos{images}', function (response) {
+		FB.api(id + '/?fields=photos.limit(100){images}', function (response) {
 
 			// Count the photos
 			var count = Object.keys(response.photos.data).length;
