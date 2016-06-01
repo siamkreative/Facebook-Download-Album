@@ -118,3 +118,12 @@ function downloadAlbum() {
 		});
 	});
 }
+
+$(function () {
+	var howto = $('#howto');
+	howto.siblings().hide();
+	$('a[href="#readmore"]').on('click', function (event) {
+		event.preventDefault();
+		howto.siblings().toggle('fast');
+	});
+});
