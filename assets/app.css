@@ -45,6 +45,12 @@ hr {
 	display: none;
 	line-height: 25px;
 }
+@media only screen and (max-width:768px) {
+	#form input, #form button {
+		display: block;
+		width: 100%;
+	}
+}
 .form-disabled {
 	opacity: 0.5;
 }
